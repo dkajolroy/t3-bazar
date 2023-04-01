@@ -48,7 +48,7 @@ function Headers() {
               <li>
                 <select className="border-r border-slate-400 bg-slate-200  px-2 text-sm text-slate-500 transition hover:text-slate-900 focus:bg-slate-300 focus:outline-none">
                   <option value="usd">USD</option>
-                  <option value="usd">TK</option>
+                  <option value="usd">BDT</option>
                   <option value="usd">Rs</option>
                 </select>
               </li>

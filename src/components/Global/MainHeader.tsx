@@ -18,7 +18,7 @@ function MainHeader() {
                 placeholder="Search..."
                 className="w-full rounded-l-md bg-slate-200 px-2 py-1 transition focus:bg-slate-300 focus:outline-none md:py-2"
               />
-              <button className="rounded-r-md bg-teal-400  px-3 text-xl text-white transition hover:bg-teal-500 focus:outline-none md:px-5">
+              <button className="rounded-r-md bg-teal-500  px-3 text-xl text-white transition hover:bg-teal-600 focus:outline-none md:px-5">
                 <BsSearch />
               </button>
             </div>
