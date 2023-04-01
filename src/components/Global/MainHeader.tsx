@@ -8,7 +8,9 @@ function MainHeader() {
         <div className="grid grid-cols-9 gap-2">
           {/* Logo Left Side */}
           <div className="col-span-3 md:col-span-2">
-            <img className="max-h-14 p-1" src="/logo.png" alt="logo" />
+            <Link href="/">
+              <img className="max-h-14 p-1" src="/logo.png" alt="logo" />
+            </Link>
           </div>
           <div className="col-span-6 flex  h-full items-center md:col-span-5 ">
             {/* Search Box  Center*/}

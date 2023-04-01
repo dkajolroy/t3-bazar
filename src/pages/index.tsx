@@ -18,7 +18,7 @@ const Home = ({ response }: Props) => {
       </Head>
 
       {/* Body */}
-      <main className=" bg-slate-100">
+      <main>
         {/* Hero Slider */}
         <div className="container">
           <HeroSection />

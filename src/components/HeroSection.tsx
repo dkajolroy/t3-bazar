@@ -16,7 +16,7 @@ function HeroSection() {
         {/* Carousel Map */}
         <div className="col-span-7 sm:col-span-5 lg:col-span-4">
           <Swiper
-            spaceBetween={30}
+            spaceBetween={0}
             centeredSlides={true}
             autoplay={{
               delay: 5000,

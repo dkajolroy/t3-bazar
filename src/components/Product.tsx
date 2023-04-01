@@ -6,7 +6,7 @@ function Product({ item }: Props) {
   return (
     <div className="overflow-hidden bg-white hover:shadow-lg">
       {/* Go to View Product */}
-      <Link href="/">
+      <Link href={`/product/${item.id.toString()}`}>
         <div className="flex">
           <img
             className=" w-full object-cover"

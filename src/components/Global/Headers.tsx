@@ -11,11 +11,11 @@ function Headers() {
         </Link>
       </div>
       {/* Header info */}
-      <div className="hidden bg-slate-200 md:block">
+      <div className=" bg-slate-200 py-1 ">
         <div className="container flex items-center justify-between">
           {/* Left Section */}
-          <div>
-            <ul className="flex">
+          <div className="hidden md:block ">
+            <ul className="flex ">
               <li>
                 <Link
                   className="border-r border-slate-400 px-2 text-sm text-slate-500 hover:text-slate-900"
@@ -43,40 +43,40 @@ function Headers() {
             </ul>
           </div>
           {/* Right Section */}
-          <div>
-            <ul className="flex list-none">
-              <li>
-                <select className="border-r border-slate-400 bg-slate-200  px-2 text-sm text-slate-500 transition hover:text-slate-900 focus:bg-slate-300 focus:outline-none">
+          <div className="w-full md:w-fit">
+            <ul className="flex w-full list-none justify-between ">
+              <li className="w-1/5 border-r border-slate-400 text-center md:w-max">
+                <select className=" bg-slate-300 px-2 text-sm text-slate-500 transition hover:text-slate-900 focus:bg-slate-300 focus:outline-none">
                   <option value="usd">USD</option>
                   <option value="usd">BDT</option>
                   <option value="usd">Rs</option>
                 </select>
               </li>
-              <li>
+              <li className="w-1/5 border-r border-slate-400 text-center md:w-max">
                 <Link
-                  className="border-r border-slate-400 px-2 text-sm text-slate-500 hover:text-slate-900"
+                  className=" px-2 text-sm text-slate-500 hover:text-slate-900"
                   href="/"
                 >
                   Protection
                 </Link>
               </li>
-              <li>
+              <li className="w-1/5 border-r border-slate-400  text-center md:w-max">
                 <Link
-                  className="border-r border-slate-400 px-2 text-sm text-slate-500 hover:text-slate-900"
+                  className=" px-2 text-sm text-slate-500 hover:text-slate-900"
                   href="/"
                 >
                   Service
                 </Link>
               </li>
-              <li>
+              <li className="w-1/5 border-r border-slate-400 text-center md:w-max">
                 <Link
-                  className="border-r border-slate-400 px-2 text-sm text-slate-500 hover:text-slate-900"
+                  className=" px-2 text-sm text-slate-500 hover:text-slate-900"
                   href="/"
                 >
                   Help
                 </Link>
               </li>
-              <li>
+              <li className="w-1/5 text-center  md:w-max">
                 <Link
                   className=" px-2 text-sm text-slate-500 hover:text-slate-900"
                   href="/"

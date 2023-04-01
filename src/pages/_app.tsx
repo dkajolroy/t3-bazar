@@ -16,10 +16,12 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <Headers />
-      <Component {...pageProps} />
-      <Footer />
-      <MobileMenu />
+      <div className="bg-slate-100">
+        <Headers />
+        <Component {...pageProps} />
+        <Footer />
+        <MobileMenu />
+      </div>
     </SessionProvider>
   );
 };
