@@ -5,11 +5,13 @@ function Headers() {
   return (
     <div>
       {/* Seller Center Link */}
-      <Link href="/">
-        <div className="h-16 bg-[url('/header.jpg')] bg-cover bg-center  bg-no-repeat"></div>
-      </Link>
+      <div className="hidden xl:block">
+        <Link href="/">
+          <div className="h-16 bg-[url('/header.jpg')] bg-cover bg-center  bg-no-repeat"></div>
+        </Link>
+      </div>
       {/* Header info */}
-      <div className=" bg-slate-200">
+      <div className="hidden bg-slate-200 md:block">
         <div className="container flex items-center justify-between">
           {/* Left Section */}
           <div>

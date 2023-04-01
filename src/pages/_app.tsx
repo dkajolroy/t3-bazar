@@ -3,6 +3,7 @@ import { SessionProvider } from "next-auth/react";
 import { type AppType } from "next/app";
 
 import Headers from "~/components/Headers";
+import MobileMenu from "~/components/MobileMenu";
 import "~/styles/globals.css";
 
 const MyApp: AppType<{ session: Session | null }> = ({
@@ -13,6 +14,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
     <SessionProvider session={session}>
       <Headers />
       <Component {...pageProps} />
+      <MobileMenu />
     </SessionProvider>
   );
 };

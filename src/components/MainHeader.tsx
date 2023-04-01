@@ -4,26 +4,27 @@ import { FiHeart, FiUser } from "react-icons/fi";
 function MainHeader() {
   return (
     <div className="bg-white ">
-      <div className="container py-3">
+      <div className="container py-1 md:py-2">
         <div className="grid grid-cols-9 gap-2">
           {/* Logo Left Side */}
-          <div className="col-span-2">
-            <img className="h-12" src="/logo.png" alt="logo" />
+          <div className="col-span-3 md:col-span-2">
+            <img className="max-h-14 p-1" src="/logo.png" alt="logo" />
           </div>
-          <div className="col-span-5 flex h-full items-center">
+          <div className="col-span-6 flex  h-full items-center md:col-span-5 ">
             {/* Search Box  Center*/}
             <div className="flex w-full">
               <input
                 type="text"
-                className="w-full rounded-l-md bg-slate-200 px-2 py-2 transition focus:bg-slate-300 focus:outline-none"
+                placeholder="Search..."
+                className="w-full rounded-l-md bg-slate-200 px-2 py-1 transition focus:bg-slate-300 focus:outline-none md:py-2"
               />
-              <button className="rounded-r-md bg-teal-400  px-5 text-xl text-white transition hover:bg-teal-500 focus:outline-none">
+              <button className="rounded-r-md bg-teal-400  px-3 text-xl text-white transition hover:bg-teal-500 focus:outline-none md:px-5">
                 <BsSearch />
               </button>
             </div>
           </div>
           {/* Cart section Right side */}
-          <div className="col-span-2">
+          <div className=" col-span-2 hidden md:flex">
             <ul className="flex h-full list-none items-center justify-end">
               <li>
                 <Link
