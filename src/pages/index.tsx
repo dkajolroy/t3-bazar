@@ -54,6 +54,11 @@ const Home = ({ flashResponse, productRes }: Props) => {
               <Product item={item} key={index} />
             ))}
           </div>
+          <div className="mt-5 flex justify-center">
+            <button className="text-lx w-2/6 rounded-sm border bg-teal-500 px-5 py-2 text-white transition hover:border-teal-600 hover:bg-transparent hover:text-teal-600 focus:outline-none">
+              Load More
+            </button>
+          </div>
         </div>
       </main>
     </>
@@ -64,7 +69,7 @@ export async function getStaticProps() {
   // Call an external API endpoint to get posts
   const flashRes = await fetch("https://dummyjson.com/products?limit=6");
   const loadProductRes = await fetch(
-    "https://dummyjson.com/products?limit=10&skip=10&select=title,price,discountPercentage,rating,thumbnail"
+    "https://dummyjson.com/products?limit=18&skip=0&select=title,price,discountPercentage,rating,thumbnail"
   );
   const flashResponse = await flashRes.json();
   const productRes = await loadProductRes.json();
