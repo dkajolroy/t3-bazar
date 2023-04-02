@@ -1,7 +1,7 @@
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { type Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 import { type AppType } from "next/app";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
