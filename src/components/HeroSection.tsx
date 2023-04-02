@@ -30,13 +30,12 @@ function HeroSection() {
             className="h-full"
           >
             {carousel.map((item, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  onClick={() => router.push(item.link)}
-                  className="h-full w-full cursor-pointer"
-                  src={item.image}
-                  alt="slide"
-                />
+              <SwiperSlide
+                className="cursor-pointer"
+                onClick={() => router.push(item.link)}
+                key={index}
+              >
+                <img className="h-full w-full " src={item.image} alt="slide" />
               </SwiperSlide>
             ))}
           </Swiper>

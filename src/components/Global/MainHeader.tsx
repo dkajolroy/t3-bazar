@@ -1,7 +1,17 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 import { BsCart4, BsSearch } from "react-icons/bs";
 import { FiHeart, FiUser } from "react-icons/fi";
 function MainHeader() {
+  const router = useRouter();
+  const [text, setText] = useState("");
+  function searchAction() {
+    router.push({
+      pathname: `/search`,
+      query: { text },
+    });
+  }
   return (
     <div className="bg-white ">
       <div className="container py-1 md:py-2">
@@ -16,11 +26,20 @@ function MainHeader() {
             {/* Search Box  Center*/}
             <div className="flex w-full">
               <input
+                onChange={(e) => setText(e.target.value)}
                 type="text"
+                onKeyUp={(e) => {
+                  if (e.key === "Enter") {
+                    searchAction();
+                  }
+                }}
                 placeholder="Search..."
                 className="w-full rounded-l-md bg-slate-200 px-2 py-1 transition focus:bg-slate-300 focus:outline-none md:py-2"
               />
-              <button className="rounded-r-md bg-teal-500  px-3 text-xl text-white transition hover:bg-teal-600 focus:outline-none md:px-5">
+              <button
+                onClick={searchAction}
+                className="rounded-r-md bg-teal-500  px-3 text-xl text-white transition hover:bg-teal-600 focus:outline-none md:px-5"
+              >
                 <BsSearch />
               </button>
             </div>

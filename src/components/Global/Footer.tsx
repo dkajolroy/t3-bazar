@@ -1,13 +1,12 @@
+import FooterBottom from "./FooterBottom";
+import FooterHead from "./FooterHead";
+
 function Footer() {
   return (
-    <div className="bg-slate-400 py-5">
+    <div className="bg-slate-200 pb-20 pt-5 ">
+      <FooterHead />
       <div className="container">
-        <div className="grid grid-cols-4">
-          <div className="col-span-1">Home</div>
-          <div className="col-span-1">Home</div>
-          <div className="col-span-1">Home</div>
-          <div className="col-span-1">Home</div>
-        </div>
+        <FooterBottom />
       </div>
     </div>
   );
