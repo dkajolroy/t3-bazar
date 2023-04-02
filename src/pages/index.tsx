@@ -1,8 +1,9 @@
 import Head from "next/head";
-import Categories from "~/components/Categories";
 import FlashSell from "~/components/FlashSellHeader";
 import HeroSection from "~/components/HeroSection";
+import Categories from "~/components/Home/Categories";
 import Product from "~/components/Product";
+import { categories } from "~/constants/data";
 import { ProductResponse } from "~/interface/dataType";
 
 type Props = { flashResponse?: ProductResponse; productRes?: ProductResponse };
@@ -35,11 +36,16 @@ const Home = ({ flashResponse, productRes }: Props) => {
             </div>
           </div>
         </div>
+        {/* Categories */}
         <div className="container ">
           <h2 className="text-2xl font-medium text-slate-800">Categories</h2>
-          <Categories />
+          <div className="grid grid-cols-2 gap-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+            {categories.map((item, index) => (
+              <Categories item={item} key={index} />
+            ))}
+          </div>
         </div>
-        {/* Other */}
+        {/* More Product */}
         <div className="container py-10">
           <h2 className="text-2xl font-medium text-slate-800">Just For You</h2>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
