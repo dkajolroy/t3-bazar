@@ -5,9 +5,9 @@ import { type AppType } from "next/app";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Footer from "~/components/Global/Footer";
-import Headers from "~/components/Global/Headers";
-import MobileMenu from "~/components/Global/MobileMenu";
+import Footer from "~/components/global/Footer";
+import Headers from "~/components/global/Headers";
+import MobileMenu from "~/components/global/MobileMenu";
 import "~/styles/globals.css";
 
 const MyApp: AppType<{ session: Session | null }> = ({

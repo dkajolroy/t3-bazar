@@ -110,3 +110,93 @@ export const carousel = [
     link: "/",
   },
 ];
+
+// Categories
+export const categories = [
+  {
+    name: "Smart Phones",
+    image:
+      "https://static-01.daraz.com.bd/p/fb70589362716f5b0f88dc557782c217.jpg",
+  },
+  {
+    name: "Tablets",
+    image:
+      "https://static-01.daraz.com.bd/p/03c06d369a83e32bfb07aa50cbbde520.jpg",
+  },
+
+  {
+    name: "T-Shirts",
+    image:
+      "https://static-01.daraz.com.bd/p/1f14eaf0d0e770e52cae4640c6176631.jpg",
+  },
+
+  {
+    name: "Gas Stove Parts & Accessories",
+    image:
+      "https://static-01.daraz.com.bd/p/2bba77dade2b3de6e1ffec2b32339731.jpg",
+  },
+
+  {
+    name: "Condoms",
+    image:
+      "https://static-01.daraz.com.bd/p/3416c4b47ab27d8d489bb987f44d3fee.png",
+  },
+
+  {
+    name: "Personal Safety & Security",
+    image:
+      "https://static-01.daraz.com.bd/p/e61c1f68d5d0fa3b7f2cdc15d1307fc3.jpg",
+  },
+
+  {
+    name: "Business",
+    image:
+      "https://static-01.daraz.com.bd/p/02e345a0d737bd062e12e0edc318a27b.jpg",
+  },
+
+  {
+    name: "Smartphone Lenses",
+    image:
+      "https://static-01.daraz.com.bd/p/4648f53ef6ad8e6be84d498e25d0811a.jpg",
+  },
+  {
+    name: "Sports",
+    image:
+      "https://static-01.daraz.com.bd/p/f123af9f008bc4602296bbbccd999b65.jpg",
+  },
+  {
+    name: "Speakers",
+    image:
+      "https://static-01.daraz.com.bd/p/9ad10fbf6a04e7c8a3cf1ab03fcc4134.jpg",
+  },
+  {
+    name: "Cigarette Lighter & Parts",
+    image:
+      "https://static-01.daraz.com.bd/p/6585e63e56260a34a20fd55035adb07d.jpg",
+  },
+  {
+    name: "Wireless Earbuds",
+    image:
+      "https://static-01.daraz.com.bd/p/2c90ab5f66b65d3f1049064c72f8bd7f.jpg",
+  },
+  {
+    name: "Running Shoes",
+    image:
+      "https://static-01.daraz.com.bd/p/e162fc3469824bed0d416497049a9a82.jpg",
+  },
+  {
+    name: "Football",
+    image:
+      "https://static-01.daraz.com.bd/p/9f722609aa784276ebc6757b1538bc56.jpg",
+  },
+  {
+    name: "Backpacks",
+    image:
+      "https://static-01.daraz.com.bd/p/1be0f54307d75eeb9a808d378d1e4df6.jpg",
+  },
+  {
+    name: "LED Strip Lighting",
+    image:
+      "https://static-01.daraz.com.bd/p/0c0a6c944a4b3f26d62a1c393616c995.jpg",
+  },
+];

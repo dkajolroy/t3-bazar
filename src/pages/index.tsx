@@ -1,11 +1,12 @@
 import Head from "next/head";
+import Categories from "~/components/Categories";
 import FlashSell from "~/components/FlashSellHeader";
 import HeroSection from "~/components/HeroSection";
 import Product from "~/components/Product";
 import { ProductResponse } from "~/interface/dataType";
 
-type Props = { response?: ProductResponse };
-const Home = ({ response }: Props) => {
+type Props = { flashResponse?: ProductResponse; productRes?: ProductResponse };
+const Home = ({ flashResponse, productRes }: Props) => {
   return (
     <>
       <Head>
@@ -28,16 +29,24 @@ const Home = ({ response }: Props) => {
           <div className="bg-white">
             <FlashSell />
             <div className="my-2 grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
-              {response?.products.map((item, index) => (
+              {flashResponse?.products.map((item, index) => (
                 <Product item={item} key={index} />
               ))}
             </div>
           </div>
         </div>
+        <div className="container ">
+          <h2 className="text-2xl font-medium text-slate-800">Categories</h2>
+          <Categories />
+        </div>
         {/* Other */}
         <div className="container py-10">
+          <h2 className="text-2xl font-medium text-slate-800">Just For You</h2>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
             {/*  product */}
+            {productRes?.products.map((item, index) => (
+              <Product item={item} key={index} />
+            ))}
           </div>
         </div>
       </main>
@@ -47,14 +56,19 @@ const Home = ({ response }: Props) => {
 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts
-  const res = await fetch("https://dummyjson.com/products?limit=6");
-  const response = await res.json();
+  const flashRes = await fetch("https://dummyjson.com/products?limit=6");
+  const loadProductRes = await fetch(
+    "https://dummyjson.com/products?limit=10&skip=10&select=title,price,discountPercentage,rating,thumbnail"
+  );
+  const flashResponse = await flashRes.json();
+  const productRes = await loadProductRes.json();
 
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
   return {
     props: {
-      response,
+      flashResponse,
+      productRes,
     },
   };
 }

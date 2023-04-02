@@ -1,9 +1,9 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
-import { Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Breadcrumb from "~/components/Breadcrumb";
 import Review from "~/components/Review";
+import ImageSlider from "~/components/viewProduct/ImageSlider";
+import Variant from "~/components/viewProduct/Variant";
 import { ProductType } from "~/interface/dataType";
 
 const xProduct = {
@@ -46,37 +46,14 @@ function ViewProduct({ product }: Props) {
           />
           <div className="grid grid-cols-1 gap-10  sm:grid-cols-2">
             {/* Product View Image */}
-            <div className="sm:col-span-1 ">
+            <div className=" sm:col-span-1">
               <img
-                className="block w-full"
+                className="mx-auto block max-h-[80vh] max-w-full"
                 src={product.thumbnail}
                 alt="product"
               />
               {/* Image Slider */}
-              <div className="w-full bg-slate-400">
-                <Swiper
-                  slidesPerView={4}
-                  spaceBetween={10}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  modules={[Pagination, Navigation]}
-                  className="h-[120px]"
-                >
-                  {product.images.map((item, index) => (
-                    <SwiperSlide
-                      className="w-1/4 cursor-pointer border transition hover:border-slate-600 hover:opacity-[0.5]"
-                      key={index}
-                    >
-                      <img
-                        className="min-h-full w-full "
-                        src={item}
-                        alt="photo"
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
+              <ImageSlider images={product.images} />
             </div>
             {/* Product Details */}
             <div className="sm:col-span-1">
@@ -91,15 +68,10 @@ function ViewProduct({ product }: Props) {
               {/* Product category based features */}
               {/* Size or color or Other variant */}
               <div>
-                <button className="mr-2 rounded-md bg-slate-200 px-2 py-1 hover:bg-slate-300 focus:outline-none">
-                  8/64GB
-                </button>
-                <button className="mr-2 rounded-md bg-slate-200 px-2 py-1 hover:bg-slate-300 focus:outline-none">
-                  12/128GB
-                </button>
-                <button className="mr-2 rounded-md bg-slate-200 px-2 py-1 hover:bg-slate-300 focus:outline-none">
-                  12/256GB
-                </button>
+                {/* Variant map */}
+                <Variant title="8/64GB" value="nai" />
+                <Variant title="8/128GB" value="nai" />
+                <Variant title="12/156GB" value="nai" />
               </div>
               {/* Quantity */}
               <button className="h-12 w-12 rounded-full bg-slate-300 text-2xl hover:bg-slate-400 focus:outline-none">
